@@ -51,9 +51,9 @@ pipeline {
     //                     echo "Pushing Docker image to ECR"
     //                     docker push ${EcrRegistryUrl}/${Docker_Image_Name}:${BUILD_NUMBER}
     //                 """
-    //             }
-            }
-        }
+    // //             }
+    //         }
+    //     }
         stage('Test') {
             steps {
                 echo "Testing.."
