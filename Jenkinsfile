@@ -16,13 +16,14 @@ pipeline {
         PACKAGE_PATH = "pkg/helm/"
         PACKAGE_NAME = "*.tgz"
         BUILD_NUMBER = "${env.BUILD_NUMBER}"
+    }
     triggers {
         pollSCM 'H/5 * * * *'
         }
-            stage("Clone Code"){
-            steps {
-                echo "Cloning the code"
-                git url:"https://github.com/LondheShubham153/django-notes-app.git", branch: "main"
+    stage("Clone Code"){
+        steps {
+            echo "Cloning the code"
+            git url:"https://github.com/shawla4real/edge.git", branch: "main"
             }
         }
     stage("Build"){
@@ -71,4 +72,5 @@ pipeline {
             }
         }
     }
-
+    }
+}
